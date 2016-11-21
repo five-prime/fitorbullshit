@@ -1,5 +1,5 @@
 
-
+var spacer = ""
 var foods = TAFFY([
 {
   name: "avocado",
@@ -27,12 +27,17 @@ function saveToList(event) {
     if (event.which == 13 || event.keyCode == 13) { // as the user presses the enter key, we will attempt to save the data
         mainInput = document.getElementById('mainInput').value.trim();
         if (mainInput.length > 0) {
+          //runs function to clear all output containers
+          clearFunc();
+          //hides all images
           document.getElementById("fit-img").className = "hidden";
           document.getElementById("bullshit-img").className = "hidden";
           document.getElementById("help-img").className = "hidden";
-
+            //call main getter function
               myFunc();
-        document.getElementById('mainInput').value = "";
+              document.getElementById('mainInput').value = "";
+              document.getElementById('fit-title').innerHTML = "FIT";
+
 
 
 
@@ -73,8 +78,11 @@ document.getElementById('food-title').innerHTML = userInput.toUpperCase();
 }
   else {
     console.log('does not exist');
+    document.getElementById("help-img").className = "";
+
     //call doesNotExist to alert user
     doesNotExist();
+
   }
 
 };
@@ -117,6 +125,36 @@ function tagSet(tagOne, tagTwo){
 //displays link to reference
 function linkSet(refLink, refTitle){
   document.getElementById('ref-link').innerHTML = "<a target =\"_blank\"href=\"" + refLink + "\">" + refTitle + "</a>";
+
+
+};
+//displays a snackbar (MDL component) with a link to tweet
+function doesNotExist(){
+  document.getElementById('fit-title').innerHTML = "????";
+
+
+  var snackbarContainer = document.querySelector('#demo-snackbar-example');
+  var handler = function(event) {
+  window.open('http://twitter.com/fitorbs', '_blank');
+};
+        var data = {
+          message: 'This Food Has Not Been Added Yet',
+          timeout: 4000,
+          actionHandler: handler,
+          actionText: 'Tweet Me'
+        };
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
+};
+//clears all fields
+function clearFunc(){
+  document.getElementById('fit-title').innerHTML = "";
+  document.getElementById('carb-count').innerHTML = spacer;
+  document.getElementById('energy-count').innerHTML = spacer;
+  document.getElementById('tag-one').innerHTML = spacer;
+  document.getElementById('tag-two').innerHTML = spacer;
+  console.log('cleared');
+
 
 
 };

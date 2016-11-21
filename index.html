@@ -72,7 +72,7 @@
 
             <!-- Simple Textfield -->
           <div class="mdl-textfield mdl-js-textfield">
-            <input type="text" class="mdl-textfield__input" id="mainInput" onkeypress="return saveToList(event)">
+            <input type="text" class="mdl-textfield__input" id="mainInput" onkeypress="return saveToList(event)" onfocus = "clearFunc()">
 
           </div>
 
@@ -88,13 +88,14 @@
   </div>
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text title" id="food-title"></h2>
+    <h3 class="title" id="fit-title"></h3>
+
   </div>
   <hr>
   <img src="imgs/fit.png" class="hidden"id="fit-img">
   <img src="imgs/bullshit.jpg" class="hidden" id="bullshit-img">
   <img src="imgs/help.jpg" class="hidden" id="help-img">
   <hr>
-    <h3 class="title" id="fit-title"></h3>
   </div>
 </div>
 </div>
@@ -104,36 +105,37 @@
   <div class="mdl-card__title">
     <h1 class="mdl-card__title-text title">Stats:</h1>
   </div>
-    <h4 class="title">Carbs:</h4><h4 class="title" id="carb-count"></h4>
-    <h4 class="title">Energy:</h4><h4 class="title" id="energy-count"></h4>
-    <h4 class="title">Tags:</h4><h4 class="title tag" id="tag-one"></h4>
-    <h4 class="title tag" id="tag-two"></h4>
+<div id="stats-table">
+  <table class="mdl-data-table mdl-js-data-table">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Carbs</th>
+          <th>Energy</th>
+          <th>Tag</th>
+          <th>Tag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric" id="carb-count"></td>
+          <td class="mdl-data-table__cell--non-numeric" id="energy-count"></td>
+          <td class="mdl-data-table__cell--non-numeric" id="tag-one-container"><span class="mdl-chip">
+    <span class="mdl-chip__text" id="tag-one"></span>
+</span></td>
+          <td class="mdl-data-table__cell--non-numeric" id="tag-two-container">
+            <span class="mdl-chip">
+      <span class="mdl-chip__text" id="tag-two"></span>
+  </span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
     <h4 class="title">Reference:</h4><h4 class="title" id="ref-link"></h4>
-    <button id="demo-show-snackbar" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Snackbar</button>
     <div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
       <div class="mdl-snackbar__text"></div>
       <button class="mdl-snackbar__action" type="button"></button>
     </div>
-    <script>
-    (function() {
-      'use strict';
-      var snackbarContainer = document.querySelector('#demo-snackbar-example');
-      var showSnackbarButton = document.querySelector('#demo-show-snackbar');
-      var handler = function(event) {
-        window.open('http://twitter.com/fitorbs', '_blank');
-      };
-      showSnackbarButton.addEventListener('click', function() {
-
-        var data = {
-          message: 'This Food Has Not Been Added Yet',
-          timeout: 4000,
-          actionHandler: handler,
-          actionText: 'Tweet Me'
-        };
-        snackbarContainer.MaterialSnackbar.showSnackbar(data);
-      });
-    }());
-    </script>
 
     <div class="mdl-card__menu">
 
@@ -160,32 +162,7 @@
 
 
                 </div>
-                <table class="mdl-data-table mdl-js-data-table">
-                  <thead>
-                    <tr>
-                      <th class="mdl-data-table__cell--non-numeric">Name</th>
-                      <th>Age</th>
-                      <th>ID Number</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="mdl-data-table__cell--non-numeric">Don Aubrey</td>
-                      <td>25</td>
-                      <td>49021</td>
-                    </tr>
-                    <tr>
-                      <td class="mdl-data-table__cell--non-numeric">Sophia Carson</td>
-                      <td>32</td>
-                      <td>10258</td>
-                    </tr>
-                    <tr>
-                      <td class="mdl-data-table__cell--non-numeric">Steve Moreno</td>
-                      <td>29</td>
-                      <td>12359</td>
-                    </tr>
-                  </tbody>
-                </table>
+
   </div>
 
   </main>
