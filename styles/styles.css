@@ -1,0 +1,36 @@
+
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+.demo-card-wide.mdl-card {
+  width: 55vw;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+#first_card{
+  color: #fff;
+  height: 100px;
+  background: url('../imgs/bg.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.title{
+text-align: center;
+margin: 0 auto;
+color: black;
+
+}
+#mainInput{
+    margin-left: 2rem;
+    width: 30vw;
+    height: 2rem;
+    font-size: 2rem;
+}
+
+#results{
+
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+}
