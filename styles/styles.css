@@ -2,7 +2,7 @@
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
   padding-right: 0;
 }
-.demo-card-wide.mdl-card {
+.card-wide.mdl-card {
   width: 55vw;
   margin: 0 auto;
   margin-top: 3rem;
@@ -33,4 +33,35 @@ color: black;
   margin: 0 auto;
   text-align: center;
   font-size: 2rem;
+  padding-bottom: 1rem;
+}
+#fit-img{
+  max-width: 10rem;
+  margin: 0 auto;
+}
+#bullshit-img{
+max-width: 15rem;
+margin: 0 auto;
+
+}
+#help-img{
+max-width: 10rem;
+margin: 0 auto;
+
+}
+#fit{
+margin: 0 auto;
+
+}
+.hide{
+
+  display: none;
+}
+
+.tag{
+
+  border: 1px solid gray;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+  background-color: red;
 }
