@@ -1,4 +1,7 @@
+body{
 
+  background:url('../imgs/bigbg.jpg') center / cover;
+}
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
   padding-right: 0;
 }
@@ -37,7 +40,7 @@ color: black;
 }
 #fit-img{
   max-width: 10rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 #bullshit-img{
 max-width: 15rem;
@@ -70,4 +73,9 @@ margin: 0 auto;
   margin: 0 auto;
   padding-bottom: 1rem;
 
+}
+#bullshit-img{
+
+  margin-bottom: 2rem;
+  padding: 1rem;
 }

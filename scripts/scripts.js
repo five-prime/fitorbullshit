@@ -9,7 +9,7 @@ var foods = TAFFY([
   tagOne : "Best",
   tagTwo : "Super Food",
   reference : "http://www.google.com",
-  referenceTitle : "El Goog"
+  referenceTitle : "google.com"
 
 
 },
@@ -21,7 +21,7 @@ var foods = TAFFY([
   tagOne : "worst",
   tagTwo : "unhealthy",
   reference: "http://www.google.com",
-  referenceTitle: "El Goog"
+  referenceTitle: "google.com"
 }]);
 function saveToList(event) {
     if (event.which == 13 || event.keyCode == 13) { // as the user presses the enter key, we will attempt to save the data
@@ -36,7 +36,9 @@ function saveToList(event) {
             //call main getter function
               myFunc();
               document.getElementById('mainInput').value = "";
-              document.getElementById('fit-title').innerHTML = "FIT";
+              //show two cards
+              document.getElementById('results-card').className = "";
+              document.getElementById('stats-card').className = "";
 
 
 
@@ -148,7 +150,8 @@ function doesNotExist(){
 };
 //clears all fields
 function clearFunc(){
-  document.getElementById('fit-title').innerHTML = "";
+  document.getElementById('food-title').innerHTML = spacer;
+  document.getElementById('fit-title').innerHTML = spacer;
   document.getElementById('carb-count').innerHTML = spacer;
   document.getElementById('energy-count').innerHTML = spacer;
   document.getElementById('tag-one').innerHTML = spacer;
