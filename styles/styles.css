@@ -1,8 +1,14 @@
 body{
 
-  background:url('../imgs/bigbg.jpg') center / cover;
   overflow-x: hidden;
 }
+#banner-title{
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  margin-left: 1rem;
+
+}
+
 #mobile-demo{
   max-width: 70vw!important;
 
@@ -35,4 +41,7 @@ body{
 #bullshit-img{
 
   max-width: 225px;
+}
+#fit-img{
+
 }

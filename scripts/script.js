@@ -29,6 +29,7 @@ function buttonPress(){
   if (mainInput.length > 0) {
     //runs function to clear all output containers
     clearFunc();
+    document.getElementById('result-card').className = "card stacked";
     //hides all images
     // document.getElementById("fit-img").className = "hidden";
     // document.getElementById("bullshit-img").className = "hidden";
@@ -47,6 +48,7 @@ function saveToList(event) {
         mainInput = document.getElementById('mainInput').value.trim();
         if (mainInput.length > 0) {
           //runs function to clear all output containers
+
           clearFunc();
           //hides all images
           // document.getElementById("fit-img").className = "hidden";
@@ -55,6 +57,8 @@ function saveToList(event) {
             //call main getter function
               myFunc();
               document.getElementById('mainInput').value = "";
+              document.getElementById('result-card').className = "card stacked";
+
               //show two cards
               // document.getElementById('results-card').className = "";
               // document.getElementById('stats-card').className = "";
