@@ -1,81 +1,38 @@
 body{
 
   background:url('../imgs/bigbg.jpg') center / cover;
+  overflow-x: hidden;
 }
-.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
-  padding-right: 0;
-}
-.card-wide.mdl-card {
-  width: 55vw;
-  margin: 0 auto;
-  margin-top: 3rem;
-}
-#first_card{
-  color: #fff;
-  height: 100px;
-  background: url('../imgs/bg.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-.title{
-text-align: center;
-margin: 0 auto;
-color: black;
+#mobile-demo{
+  max-width: 70vw!important;
 
 }
 #mainInput{
-    margin-left: 2rem;
-    width: 30vw;
     height: 2rem;
     font-size: 2rem;
+
 }
 
-#results{
+
+.center{
 
   margin: 0 auto;
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 1rem;
 }
-#fit-img{
-  max-width: 10rem;
-  margin: 2rem auto;
-}
-#bullshit-img{
-max-width: 15rem;
-margin: 0 auto;
 
-}
-#help-img{
-max-width: 10rem;
-margin: 0 auto;
-
-}
-#fit{
-margin: 0 auto;
-
-}
-.hide{
+.hidden{
 
   display: none;
-}
+  }
 
-.tag{
-
-  border: 1px solid gray;
-  margin-bottom: .5rem;
-  margin-top: .5rem;
+#tag-one{
   background-color: red;
 }
-#stats-table{
-
-  margin: 0 auto;
-  padding-bottom: 1rem;
+#tag-two{
+  background-color: dodgerblue;
 
 }
+
 #bullshit-img{
 
-  margin-bottom: 2rem;
-  padding: 1rem;
+  max-width: 225px;
 }
